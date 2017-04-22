@@ -1,4 +1,4 @@
-package br.com.a4system.agenda;
+package br.com.a4systemlab.agenda;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

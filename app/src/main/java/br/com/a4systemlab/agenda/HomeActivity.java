@@ -1,5 +1,7 @@
-package br.com.a4system.agenda;
+package br.com.a4systemlab.agenda;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -92,6 +94,13 @@ public class HomeActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_send) {
 
+        } else if (id == R.id.nav_exit) {
+            SharedPreferences settings = getSharedPreferences("Sessao", MODE_PRIVATE);
+            settings.edit().clear().commit();
+
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -1,4 +1,4 @@
-package br.com.a4system.agenda;
+package br.com.a4systemlab.agenda;
 
 import org.junit.Test;
 

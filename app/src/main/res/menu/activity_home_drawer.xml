@@ -18,6 +18,10 @@
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
             android:title="Tools" />
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/ic_menu_exit"
+            android:title="Sair da conta" />
     </group>
 
     <item android:title="Communicate">
