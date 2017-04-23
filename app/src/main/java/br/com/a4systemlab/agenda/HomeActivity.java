@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +15,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import com.google.gson.Gson;
+
+import br.com.a4systemlab.agenda.entity.User;
 
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -41,7 +47,20 @@ public class HomeActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
+        View header = navigationView.getHeaderView(0);
+
         navigationView.setNavigationItemSelectedListener(this);
+
+        SharedPreferences sessao = getSharedPreferences("Sessao", MODE_PRIVATE);
+
+        User user = new Gson().fromJson(sessao.getString("user", "NULL"), User.class);
+
+        TextView text_user_login = (TextView) header.findViewById(R.id.text_user_login);
+        TextView text_user_email = (TextView) header.findViewById(R.id.text_user_email);
+
+        text_user_login.setText(user.getName());
+        text_user_email.setText(user.getEmail());
     }
 
     @Override
@@ -82,22 +101,19 @@ public class HomeActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_ativividades) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_contatos) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_compromissos) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_compartilhar) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_termos) {
 
         } else if (id == R.id.nav_exit) {
             SharedPreferences settings = getSharedPreferences("Sessao", MODE_PRIVATE);
             settings.edit().clear().commit();
-
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
             finish();

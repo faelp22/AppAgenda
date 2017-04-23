@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DataBase extends SQLiteOpenHelper {
 
     private static final String DATABASE = "appAgenda";
-    private static final int VERSAO = 1;
+    private static final int VERSAO = 2;
 
     public DataBase(Context context) {
         super(context, DATABASE, null, VERSAO);
@@ -28,6 +28,15 @@ public class DataBase extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        switch (oldVersion){
+            case 1:
 
+                db.execSQL("drop table " + DataBaseSQL.atividade + ";");
+                db.execSQL("drop table " + DataBaseSQL.contato + ";");
+                db.execSQL("drop table " + DataBaseSQL.compromisso + ";");
+                onCreate(db);
+
+                break;
+        }
     }
 }

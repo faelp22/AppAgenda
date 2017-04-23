@@ -1,13 +1,16 @@
 <resources>
     <string name="app_name">Agenda</string>
     <string name="title_activity_home">Agenda</string>
+    <string name="title_activity_atividades">Atividades</string>
+    <string name="title_activity_contatos">Contatos</string>
+    <string name="title_activity_compromissos">Compromissos</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Configurações</string>
     <string name="title_activity_login">Login</string>
-
+    
     <!-- Strings related to login -->
     <string name="prompt_email">Digite seu e-mail</string>
     <string name="prompt_password">Digite sua senha</string>
@@ -16,8 +19,8 @@
     <string name="error_invalid_email">E-mail invalido!</string>
     <string name="error_invalid_password">Senha muito pequena o minimo é 6 digitos!</string>
     <string name="error_field_required">Campo obrigatório</string>
+    <string name="error_network_off">Você não está conectado a internet!</string>
     <string name="error_login">Usuário ou senha inválidos!</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="title_activity_api_address">ApiAddressActivity</string>
 </resources>

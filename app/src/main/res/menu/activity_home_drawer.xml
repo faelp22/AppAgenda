@@ -3,37 +3,33 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_ativividades"
+            android:icon="@drawable/ic_menu_atividades"
+            android:title="Atividades" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_contatos"
+            android:icon="@drawable/ic_menu_contatos"
+            android:title="Contatos" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_compromissos"
+            android:icon="@drawable/ic_menu_compromissos"
+            android:title="Compromissos" />
         <item
             android:id="@+id/nav_exit"
             android:icon="@drawable/ic_menu_exit"
             android:title="Sair da conta" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="Sobre">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/nav_compartilhar"
                 android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:title="Compartilhar" />
             <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:id="@+id/nav_termos"
+                android:icon="@drawable/ic_menu_termos"
+                android:title="Termos de uso" />
         </menu>
     </item>
 
